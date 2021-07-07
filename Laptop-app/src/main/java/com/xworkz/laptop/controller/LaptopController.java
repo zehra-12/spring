@@ -33,8 +33,10 @@ public class LaptopController {
 		return "/index.jsp";
 		*/
 		System.out.println(laptopdto);
-		model.addAttribute("display","Thanks");
-		return "/index.jsp";
+		model.addAttribute("display",
+				"Thanks:" +laptopdto.getLaptopName() +"\t" +laptopdto.getLaptopBrand() +"\t" +laptopdto.getRam() +"\t" +laptopdto.getCost() +"\t");
+		/*return "/WEB-INF/pages/LaptopResponse.jsp";*/
+		return "LaptopResponse";
 	}
 	@RequestMapping(value ="/abc.do")
 	public String onabcclick()
